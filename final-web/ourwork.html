@@ -74,7 +74,8 @@
           "lg": "48px","base": "8px","xs": "4px","xl": "80px","margin-mobile": "16px"
         },
         "fontFamily": {
-          "display-lg": ["Hanken Grotesk","sans-serif"],
+          "serif": ["Playfair Display", "serif"],
+          "display-lg": ["Playfair Display", "serif"],
           "body-md": ["Hanken Grotesk","sans-serif"],
           "body-lg": ["Hanken Grotesk","sans-serif"],
           "label-md": ["Hanken Grotesk","sans-serif"],
@@ -361,10 +362,10 @@ body { scroll-behavior: smooth; background: #fbf8ff; }
     <div class="hidden md:flex items-center justify-center gap-8 md:gap-12 w-full pt-2 pb-0">
       <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html">Home</a>
       <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="about.html">About</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold active-page text-primary pb-3" href="ourwork.html">Services</a>
+      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="ourwork.html">Services</a>
       <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="gallery.html">Events</a>
       <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html#impact">Impacts</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="contact.html">Connect</a>
+      <a class="nav-link font-headline-md text-[17px] font-bold active-page text-primary pb-3" href="contact.html">Connect</a>
     </div>
   </div>
 
@@ -399,9 +400,9 @@ body { scroll-behavior: smooth; background: #fbf8ff; }
           <span class="material-symbols-outlined text-2xl opacity-70">group</span>
           <span class="font-display-lg text-[17px] font-bold">About</span>
         </a>
-        <a href="ourwork.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-primary">
-          <span class="material-symbols-outlined text-2xl opacity-100">volunteer_activism</span>
-          <span class="font-display-lg text-[17px] font-bold">Programs</span>
+        <a href="ourwork.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">volunteer_activism</span>
+          <span class="font-display-lg text-[17px] font-bold">Services</span>
         </a>
         <a href="gallery.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">image</span>
@@ -411,8 +412,8 @@ body { scroll-behavior: smooth; background: #fbf8ff; }
           <span class="material-symbols-outlined text-2xl opacity-70">bar_chart</span>
           <span class="font-display-lg text-[17px] font-bold">Impacts</span>
         </a>
-        <a href="contact.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
-          <span class="material-symbols-outlined text-2xl opacity-70">mail</span>
+        <a href="contact.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-primary">
+          <span class="material-symbols-outlined text-2xl opacity-100">mail</span>
           <span class="font-display-lg text-[17px] font-bold">Connect</span>
         </a>
         
@@ -456,7 +457,7 @@ body { scroll-behavior: smooth; background: #fbf8ff; }
 </section>
 
 <!-- MARQUEE -->
-<div class="bg-primary py-4 md:py-lg overflow-hidden border-y border-primary/20 mb-12 md:mb-12">
+<div class="bg-primary py-4 md:py-lg overflow-hidden border-y border-primary/20 mb-4 md:mb-4">
   <div class="marquee-container font-display-lg text-[16px] md:text-headline-md uppercase tracking-[0.2em]">
     <div class="marquee-content text-on-primary/90">
       <span>Hope • Compassion • Charity • Empathy • Community • Growth • Kindness • Hope • Compassion • Charity • Empathy • Community • Growth • Kindness</span>
@@ -469,7 +470,7 @@ body { scroll-behavior: smooth; background: #fbf8ff; }
 
 
 <!-- WHAT WE DO — INTRO -->
-<section class="py-8 px-6 max-w-6xl mx-auto mb-8 md:mb-8">
+<section class="py-4 px-6 max-w-6xl mx-auto mb-4 md:mb-4">
   <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
 
     <!-- Image -->
@@ -499,7 +500,7 @@ body { scroll-behavior: smooth; background: #fbf8ff; }
 
 <!-- PROGRAMS GRID -->
 <!-- MULTIMEDIA INTERACTIVE SERVICES -->
-<section class="py-8 md:py-12 bg-[#faf9f6] text-on-surface">
+<section class="py-4 md:py-8 bg-[#faf9f6] text-on-surface">
   <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
     
     <!-- Header -->
@@ -731,6 +732,47 @@ function showMedia(panelKey) {
         }, 4000);
       });
     }
+  });
+</script>
+<script>
+  // Preloader Logic
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+      }, 300);
+    }
+  });
+
+  // Magnetic Buttons Logic
+  document.querySelectorAll('.btn-hover').forEach(btn => {
+    btn.addEventListener('mousemove', function(e) {
+      const rect = this.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      this.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+    });
+    btn.addEventListener('mouseleave', function() {
+      this.style.transform = '';
+    });
+  });
+
+  // Active Page Highlight
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentPath = window.location.pathname.split('/').pop();
+    if (!currentPath || currentPath === '') currentPath = 'index.html';
+    
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      // If the link is an exact match for the current HTML page
+      if (href === currentPath) {
+        // Add the active text color and the underline effect
+        link.classList.add('text-primary', 'after:scale-x-100');
+        // Remove the standard opacity fading so it stands out
+        link.classList.remove('opacity-80', 'opacity-60', 'text-on-surface');
+      }
+    });
   });
 </script>
 </body>

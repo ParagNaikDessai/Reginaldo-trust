@@ -27,6 +27,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
 
 <script id="tailwind-config">
   tailwind.config = {
@@ -74,7 +75,8 @@
           "lg": "48px","base": "8px","xs": "4px","xl": "80px","margin-mobile": "16px"
         },
         "fontFamily": {
-          "display-lg": ["Hanken Grotesk","sans-serif"],
+          "serif": ["Playfair Display", "serif"],
+          "display-lg": ["Playfair Display", "serif"],
           "body-md": ["Hanken Grotesk","sans-serif"],
           "body-lg": ["Hanken Grotesk","sans-serif"],
           "label-md": ["Hanken Grotesk","sans-serif"],
@@ -97,6 +99,32 @@
 </script>
 <style>
   body { background-color:#fbf8ff; scroll-behavior:smooth; }
+  @keyframes ken-burns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  .ken-burns {
+    animation: ken-burns 20s ease-out forwards;
+  }
+  
+  /* Preloader Styles */
+  #preloader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #fbf8ff; z-index: 9999;
+    display: flex; justify-content: center; align-items: center;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+  }
+  #preloader.hidden {
+    opacity: 0; visibility: hidden;
+  }
+  .loader-logo {
+    width: 120px; height: auto;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .5; transform: scale(0.95); }
+  }
 
   #scroll-progress {
     position:fixed; top:0; left:0; width:0%; height:4px;
@@ -290,7 +318,7 @@
       <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="ourwork.html">Services</a>
       <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="gallery.html">Events</a>
       <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html#impact">Impacts</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="contact.html">Connect</a>
+      <a class="nav-link font-headline-md text-[17px] font-bold active-page text-primary pb-3" href="contact.html">Connect</a>
     </div>
   </div>
 
@@ -327,7 +355,7 @@
         </a>
         <a href="ourwork.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">volunteer_activism</span>
-          <span class="font-display-lg text-[17px] font-bold">Programs</span>
+          <span class="font-display-lg text-[17px] font-bold">Services</span>
         </a>
         <a href="gallery.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">image</span>
@@ -554,6 +582,47 @@
         }, 4000);
       });
     }
+  });
+</script>
+<script>
+  // Preloader Logic
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+      }, 300);
+    }
+  });
+
+  // Magnetic Buttons Logic
+  document.querySelectorAll('.btn-hover').forEach(btn => {
+    btn.addEventListener('mousemove', function(e) {
+      const rect = this.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      this.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+    });
+    btn.addEventListener('mouseleave', function() {
+      this.style.transform = '';
+    });
+  });
+
+  // Active Page Highlight
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentPath = window.location.pathname.split('/').pop();
+    if (!currentPath || currentPath === '') currentPath = 'index.html';
+    
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      // If the link is an exact match for the current HTML page
+      if (href === currentPath) {
+        // Add the active text color and the underline effect
+        link.classList.add('text-primary', 'after:scale-x-100');
+        // Remove the standard opacity fading so it stands out
+        link.classList.remove('opacity-80', 'opacity-60', 'text-on-surface');
+      }
+    });
   });
 </script>
 </body>
