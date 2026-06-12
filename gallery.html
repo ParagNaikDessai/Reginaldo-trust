@@ -253,34 +253,27 @@
   .filter-btn:hover { background:#d1d8ff; }
   .filter-btn.active { background:#2e3b80; color:#fff; border-color:#2e3b80; }
 
-  /* Masonry grid */
-  .masonry-grid {
-    columns: 3;
-    column-gap: 16px;
+  /* Gallery grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
   }
-  @media (max-width: 768px) { .masonry-grid { columns: 1; } }
+  @media (min-width: 640px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  }
 
-  /* .masonry-item {
-    break-inside: avoid;
-    margin-bottom: 16px;
-    cursor:pointer;
-    position:relative;
-    overflow:hidden;
-    border-radius:4px;
-    display:block;
-  } */
-
-  .masonry-item {
-  break-inside: avoid;
-  margin-bottom: 20px;
-  cursor:pointer;
-  position:relative;
-  overflow:hidden;
-  border-radius:12px;
-  display:block;
-
-  background:white;
-  padding:8px;
+  .gallery-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    display: block;
+    background: white;
+    padding: 8px;
 
   box-shadow:
     0 10px 25px rgba(0,0,0,0.08),
@@ -291,42 +284,44 @@
     box-shadow .4s ease;
 }
 
-.masonry-item:hover {
+.gallery-item:hover {
   transform:translateY(-8px);
   box-shadow:
     0 20px 40px rgba(0,0,0,0.12),
     0 10px 20px rgba(0,0,0,0.08);
 }
 
-  /* .masonry-item img {
+  /* .gallery-item img {
     width:100%; display:block;
     transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);
   } */
 
 
-  .masonry-item img {
+  .gallery-item img {
   width:100%;
+  height: 280px;
+  object-fit: cover;
   display:block;
   border-radius:8px;
   transition:transform .6s cubic-bezier(0.22,1,0.36,1);
 }
 
-  .masonry-item:hover img { transform:scale(1.05); }
-  .masonry-item .overlay {
+  .gallery-item:hover img { transform:scale(1.05); }
+  .gallery-item .overlay {
     position:absolute; inset:0;
     background:linear-gradient(to top, rgba(46,59,128,0.7) 0%, transparent 50%);
     opacity:0; transition:opacity 0.4s ease;
     display:flex; align-items:flex-end; padding:20px;
   }
-  .masonry-item:hover .overlay { opacity:1; }
-  .masonry-item .overlay-icon {
+  .gallery-item:hover .overlay { opacity:1; }
+  .gallery-item .overlay-icon {
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(0.7);
     opacity:0; transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);
   }
-  .masonry-item:hover .overlay-icon { opacity:1; transform:translate(-50%,-50%) scale(1); }
+  .gallery-item:hover .overlay-icon { opacity:1; transform:translate(-50%,-50%) scale(1); }
 
   /* hide items based on filter */
-  .masonry-item.hidden { display:none; }
+  .gallery-item.hidden { display:none; }
 
   /* Lightbox */
   #lightbox {
@@ -537,7 +532,7 @@
       </div>
 
       <!-- WhatsApp & Donate (Right) -->
-      <div class="flex items-center justify-end gap-4">
+      <div class="flex items-center justify-end gap-6">
         <a href="https://wa.me/919764917977" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-[#25D366] flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors" title="Chat on WhatsApp">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
@@ -548,13 +543,17 @@
     </div>
 
     <!-- Bottom Row: Desktop Links -->
-    <div class="hidden md:flex items-center justify-center gap-8 md:gap-12 w-full pt-2 pb-0">
-      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html">Home</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="about.html">About</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="ourwork.html">Services</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="gallery.html">Events</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html#impact">Impacts</a>
-      <a class="nav-link font-headline-md text-[17px] font-bold active-page text-primary pb-3" href="contact.html">Connect</a>
+    <div class="hidden md:flex flex-wrap items-center justify-center gap-x-4 lg:gap-x-8 xl:gap-x-10 gap-y-2 w-full pt-2 pb-0">
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html">Home</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="about.html">About</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="ourwork.html">Services</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="agriculture.html">Agriculture</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="training.html">Training</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="initiatives.html">Initiatives</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="mission.html">Mission</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="gallery.html">Events</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html#impact">Impacts</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold active-page text-primary pb-3" href="contact.html">Connect</a>
     </div>
   </div>
 
@@ -583,27 +582,43 @@
       <div class="flex flex-col px-6 py-4 flex-1 overflow-y-auto">
         <a href="index.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">home</span>
-          <span class="font-display-lg text-[17px] font-bold">Home</span>
+          <span class="font-display-lg text-[16px] font-bold">Home</span>
         </a>
         <a href="about.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">group</span>
-          <span class="font-display-lg text-[17px] font-bold">About</span>
+          <span class="font-display-lg text-[16px] font-bold">About</span>
         </a>
         <a href="ourwork.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">volunteer_activism</span>
-          <span class="font-display-lg text-[17px] font-bold">Services</span>
+          <span class="font-display-lg text-[16px] font-bold">Services</span>
+        </a>
+        <a href="agriculture.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">agriculture</span>
+          <span class="font-display-lg text-[16px] font-bold">Agriculture</span>
+        </a>
+        <a href="training.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">school</span>
+          <span class="font-display-lg text-[16px] font-bold">Training</span>
+        </a>
+        <a href="initiatives.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">lightbulb</span>
+          <span class="font-display-lg text-[16px] font-bold">Initiatives</span>
+        </a>
+        <a href="mission.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">flag</span>
+          <span class="font-display-lg text-[16px] font-bold">Mission</span>
         </a>
         <a href="gallery.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">image</span>
-          <span class="font-display-lg text-[17px] font-bold">Events</span>
+          <span class="font-display-lg text-[16px] font-bold">Events</span>
         </a>
         <a href="index.html#impact" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-2xl opacity-70">bar_chart</span>
-          <span class="font-display-lg text-[17px] font-bold">Impacts</span>
+          <span class="font-display-lg text-[16px] font-bold">Impacts</span>
         </a>
         <a href="contact.html" class="flex items-center gap-4 py-4 border-b border-surface-container-high text-primary">
           <span class="material-symbols-outlined text-2xl opacity-100">mail</span>
-          <span class="font-display-lg text-[17px] font-bold">Connect</span>
+          <span class="font-display-lg text-[16px] font-bold">Connect</span>
         </a>
         
         <!-- Follow Us Section -->
@@ -623,22 +638,25 @@
   </div>
 </nav>
 
-<!-- PAGE HERO BANNER -->
-<header class="page-hero pt-12 md:pt-12 pb-6 md:pb-12 px-margin-mobile md:px-margin-desktop relative">
-  <div class="page-hero-pattern"></div>
-  <div class="max-w-7xl mx-auto relative z-10 text-center">
-    <span class="font-label-md text-label-md text-on-primary/60 tracking-[0.25em] uppercase mb-sm block reveal-on-scroll">Moments That Matter</span>
-    <h1 class="font-display-lg text-4xl md:text-display-lg text-on-primary mb-4 md:mb-md animated-heading justify-center leading-tight" data-animate-heading="" id="gallery-page-title">
+<!-- HERO -->
+<section class="relative py-6 md:py-16 px-4 md:px-0 flex items-center justify-center text-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/cleaning.webp" alt="Events Background" class="w-full h-full object-cover" onerror="this.style.display='none'">
+  </div>
+  <div class="absolute inset-0 bg-surface/80"></div>
+  <div class="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-6 md:px-0">
+    <h1 class="font-display-lg text-[28px] sm:text-4xl md:text-5xl font-bold text-primary animated-heading mt-2 md:mt-4 leading-tight">
       Our Events
     </h1>
-    <p class="font-body-lg text-[15px] md:text-body-lg text-on-primary/70 max-w-2xl mx-auto leading-relaxed reveal-on-scroll" style="transition-delay:400ms;">
-      A visual record of our work, events, and the communities we serve — over 20 years of compassion in action.
+    <p class="mt-2 md:mt-4 text-primary text-[15px] sm:text-xl md:text-2xl font-semibold reveal-on-scroll">
+      Moments That Matter — Over 20 Years of Compassion
     </p>
-   
-</header>
+  </div>
+</section>
+
 
 <!-- MARQUEE -->
-<div class="bg-primary py-4 md:py-lg overflow-hidden border-y border-primary/20">
+<div class="bg-primary py-3 md:py-6 overflow-hidden border-y border-primary/20 mb-4 md:mb-6">
   <div class="marquee-container font-display-lg text-[16px] md:text-headline-md uppercase tracking-[0.3em]">
     <div class="marquee-content text-on-primary/90">
       <span>Hope • Compassion • Charity • Empathy • Community • Growth • Kindness • Hope • Compassion • Charity • Empathy • Community • Growth • Kindness</span>
@@ -675,10 +693,10 @@
     </div>
 
     <!-- Masonry grid -->
-    <div class="masonry-grid" id="masonry-grid">
+    <div class="gallery-grid" id="gallery-grid">
 
       <!-- Row 1 -->
-      <div class="masonry-item image-reveal" data-category="community" data-caption="Community Outreach – Curtorim" style="transition-delay:50ms;">
+      <div class="gallery-item image-reveal" data-category="community" data-caption="Community Outreach – Curtorim" style="transition-delay:50ms;">
         <img src="images/cleaning.webp" alt="Community Outreach"
           onerror="this.src='https://lh3.googleusercontent.com/aida/AP1WRLu-SD0vj0g5IRMNctnn_LKZifVCYnQtIZxrfCAkfNkvTnJe3ek0EeM7cyhQcGQVhZ0eLJLrSgmx29WfiJ1Iou0rqzAptUYwEPU1Nk0Zmztbo79l2yvpUVEhbvIQg2-eKks0bGhfXEBRQtJ58rH60RrWhn_Vv7vBlxypy6BUNrqswDM5GygJM2pUV2hoS41cvRUDKS2x7ZVVwL5kHbljHb4JCEJapswhkdObxK6wg_VDB7HNytTxurfLIAA'"/>
         <div class="overlay">
@@ -689,7 +707,7 @@
         </div>
       </div>
 
-      <div class="masonry-item image-reveal" data-category="elderly-care" data-caption="Caring for Our Elders" style="transition-delay:100ms;">
+      <div class="gallery-item image-reveal" data-category="elderly-care" data-caption="Caring for Our Elders" style="transition-delay:100ms;">
         <img src="images/h1.webp" alt="Elderly Care"
           onerror="this.src='https://lh3.googleusercontent.com/aida/AP1WRLsw3wMx5EY5ilMQHN4J_dtT01ZJfFKUGy6TZUM0QE-JqTkPRrQTcP_ImR1aFutYJfPv8KNmZAr-_mg1GFvUAILpPMGxYHxpYAWHdAiYD2WQ9Hu-M1769WmCLUiySHwR0UnCazutyMinTndkfiMtNPAfm_ZDghDvJ2cXGBq-2FHHuj5g-PoYZhmqFFUZLj-Yw6GF4O4yHGttx4-HqSFD9modoCbp7lPBBZpss5lv9hBcegAtlEJVg5vkdpDT'"/>
         <div class="overlay">
@@ -700,7 +718,7 @@
         </div>
       </div>
 
-      <div class="masonry-item image-reveal" data-category="agriculture" data-caption="Agriculture & Farming Support" style="transition-delay:150ms;">
+      <div class="gallery-item image-reveal" data-category="agriculture" data-caption="Agriculture & Farming Support" style="transition-delay:150ms;">
         <img src="images/farming.webp" alt="Agriculture Program"
           onerror="this.src='https://lh3.googleusercontent.com/aida/AP1WRLvEbIy3buVzEtbKOOQzZu6MTcjN5q9nyKLWL9UHHaNI2m9d-nMS0GBXIyOylARDRqSJICXpDqy6QxvHU718630P7t9gJkFaA_0ZxbcPZ5ksSOLfholNn_CgwhyO8Q31PANW6oSmceDo4EJ6IpIAZ1quCvWqDELmL6TRHSLrRYLpWeOinbIYGyur1k3dT4vQimcvIZw6lmE3unC7Y-3aWRa2fDYxvlidVa1pCSHPh7JVwcNvS3iwQLAnuYF_'"/>
         <div class="overlay">
@@ -712,7 +730,7 @@
       </div>
 
       <!-- img4–img12 with fallback hero images cycling -->
-      <div class="masonry-item image-reveal" data-category="health" data-caption="Health & Wellness Camp" style="transition-delay:200ms;">
+      <div class="gallery-item image-reveal" data-category="health" data-caption="Health & Wellness Camp" style="transition-delay:200ms;">
         <img src="images/medical.webp" alt="Health Camp"
           onerror="this.src='https://lh3.googleusercontent.com/aida/AP1WRLsiBeBLfazfb1_Yd3rOxj48qy3FP_YVdRn9DOmgxnsgURXHwNsJGeCl963CxijC3yTn0qb-LCcDaNaklF-TjYCg2Ql1ka20Uq3kFTsm7jIjXnWVbx5fO7aUFeRjxFNdDKeHN8uwt4IZd6zgJYUdkvaYxt26syL0cKMfBl1W6rvC5kYtaVLIa6d-g18fVLUjA8hNVcTLZtZGkqVn2aIN5cGSEwzRkX_SG3oFZRwZYv-HRKfLWevH2L-z2QI'"/>
         <div class="overlay">
@@ -723,7 +741,7 @@
         </div>
       </div>
 
-      <div class="masonry-item image-reveal" data-category="community" data-caption="Annual Community Gathering" style="transition-delay:250ms;">
+      <div class="gallery-item image-reveal" data-category="community" data-caption="Annual Community Gathering" style="transition-delay:250ms;">
         <img src="images/donate.webp" alt="Community Gathering"
           onerror="this.src='https://lh3.googleusercontent.com/aida/AP1WRLu-SD0vj0g5IRMNctnn_LKZifVCYnQtIZxrfCAkfNkvTnJe3ek0EeM7cyhQcGQVhZ0eLJLrSgmx29WfiJ1Iou0rqzAptUYwEPU1Nk0Zmztbo79l2yvpUVEhbvIQg2-eKks0bGhfXEBRQtJ58rH60RrWhn_Vv7vBlxypy6BUNrqswDM5GygJM2pUV2hoS41cvRUDKS2x7ZVVwL5kHbljHb4JCEJapswhkdObxK6wg_VDB7HNytTxurfLIAA'"/>
         <div class="overlay">
@@ -734,7 +752,7 @@
         </div>
       </div>
 
-      <div class="masonry-item image-reveal" data-category="education" data-caption="Skill Development Workshop" style="transition-delay:300ms;">
+      <div class="gallery-item image-reveal" data-category="education" data-caption="Skill Development Workshop" style="transition-delay:300ms;">
         <img src="images/edu_child.webp" alt="Education Workshop"
           onerror="this.src='https://lh3.googleusercontent.com/aida/AP1WRLsw3wMx5EY5ilMQHN4J_dtT01ZJfFKUGy6TZUM0QE-JqTkPRrQTcP_ImR1aFutYJfPv8KNmZAr-_mg1GFvUAILpPMGxYHxpYAWHdAiYD2WQ9Hu-M1769WmCLUiySHwR0UnCazutyMinTndkfiMtNPAfm_ZDghDvJ2cXGBq-2FHHuj5g-PoYZhmqFFUZLj-Yw6GF4O4yHGttx4-HqSFD9modoCbp7lPBBZpss5lv9hBcegAtlEJVg5vkdpDT'"/>
         <div class="overlay">
@@ -747,7 +765,7 @@
 
      
 
-      <div class="masonry-item image-reveal" data-category="health" data-caption="Free Medical Check-up Camp" style="transition-delay:450ms;">
+      <div class="gallery-item image-reveal" data-category="health" data-caption="Free Medical Check-up Camp" style="transition-delay:450ms;">
         <img src="images/healthcare.webp" alt="Medical Camp"
           onerror="this.src='https://lh3.googleusercontent.com/aida/AP1WRLu-SD0vj0g5IRMNctnn_LKZifVCYnQtIZxrfCAkfNkvTnJe3ek0EeM7cyhQcGQVhZ0eLJLrSgmx29WfiJ1Iou0rqzAptUYwEPU1Nk0Zmztbo79l2yvpUVEhbvIQg2-eKks0bGhfXEBRQtJ58rH60RrWhn_Vv7vBlxypy6BUNrqswDM5GygJM2pUV2hoS41cvRUDKS2x7ZVVwL5kHbljHb4JCEJapswhkdObxK6wg_VDB7HNytTxurfLIAA'"/>
         <div class="overlay">
@@ -760,7 +778,7 @@
 
   
 
-    </div><!-- /masonry-grid -->
+    </div><!-- /gallery-grid -->
 
     <!-- No results message -->
     <div id="no-results" class="hidden text-center py-20 reveal-on-scroll">
@@ -774,7 +792,7 @@
 </section>
 
 <!-- CTA -->
-<section class="py-8 md:py-12 bg-primary text-center text-white">
+<section class="py-6 md:py-12 bg-primary text-center text-white">
 
   <div class="max-w-4xl mx-auto px-6">
 
@@ -854,6 +872,10 @@
         <a href="index.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Home</a>
         <a href="about.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">About</a>
         <a href="ourwork.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Services</a>
+        <a href="agriculture.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Agriculture</a>
+        <a href="training.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Training</a>
+        <a href="initiatives.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Initiatives</a>
+        <a href="mission.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Mission</a>
         <a href="gallery.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Events</a>
         <a href="contact.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Connect</a>
       </div>
@@ -914,7 +936,7 @@
 
   // ── Gallery filter ───────────────────────────────────────────────────
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const items = document.querySelectorAll('.masonry-item');
+  const items = document.querySelectorAll('.gallery-item');
   const noResults = document.getElementById('no-results');
 
   filterBtns.forEach(btn => {
@@ -954,7 +976,7 @@
   let visibleItems = [];
 
   function openLightbox(idx) {
-    visibleItems = [...document.querySelectorAll('.masonry-item:not(.hidden)')];
+    visibleItems = [...document.querySelectorAll('.gallery-item:not(.hidden)')];
     currentIndex = idx;
     updateLightbox();
     lightbox.classList.add('open');
@@ -977,7 +999,7 @@
 
   items.forEach((item, i) => {
     item.addEventListener('click', () => {
-      const vis = [...document.querySelectorAll('.masonry-item:not(.hidden)')];
+      const vis = [...document.querySelectorAll('.gallery-item:not(.hidden)')];
       openLightbox(vis.indexOf(item));
     });
   });
@@ -1057,7 +1079,7 @@
     document.querySelectorAll('a').forEach(link => {
       const href = link.getAttribute('href');
       // If the link is an exact match for the current HTML page
-      if (href === currentPath) {
+      if (href === currentPath && !link.classList.contains('bg-primary')) {
         // Add the active text color and the underline effect
         link.classList.add('text-primary', 'after:scale-x-100');
         // Remove the standard opacity fading so it stands out

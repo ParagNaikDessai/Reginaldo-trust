@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="Our Mission | Reginaldo Trust" />
+<meta name="description" content="Discover the mission, vision, and core values of Reginaldo Trust, dedicated to uplifting the marginalized communities in Goa." />
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://reginaldotrust.org/mission.html" />
+<meta property="og:title" content="Our Mission | Reginaldo Trust" />
+<meta property="og:description" content="Discover the mission, vision, and core values of Reginaldo Trust, dedicated to uplifting the marginalized communities in Goa." />
+<meta property="og:image" content="images/logo.webp" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://reginaldotrust.org/mission.html" />
+<meta property="twitter:title" content="Our Mission | Reginaldo Trust" />
+<meta property="twitter:description" content="Discover the mission, vision, and core values of Reginaldo Trust, dedicated to uplifting the marginalized communities in Goa." />
+<meta property="twitter:image" content="images/logo.webp" />
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Mission | Reginaldo Trust</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#2e3b80",
+          "on-primary": "#ffffff",
+          "primary-container": "#d1d8ff",
+          "on-primary-container": "#00105c",
+          "secondary": "#5a5d72",
+          "on-secondary": "#ffffff",
+          "secondary-container": "#dee1f9",
+          "on-secondary-container": "#171a2c",
+          "tertiary": "#75546f",
+          "on-tertiary": "#ffffff",
+          "tertiary-container": "#ffd7f5",
+          "on-tertiary-container": "#2c1229",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "error-container": "#ffdad6",
+          "on-error-container": "#410002",
+          "background": "#fbf8ff",
+          "on-background": "#1a1b21",
+          "surface": "#fbf8ff",
+          "on-surface": "#1a1b21",
+          "surface-variant": "#45464f",
+          "on-surface-variant": "#c6c6d0",
+          "outline": "#8f909a",
+          "inverse-on-surface": "#f2f0f4",
+          "inverse-surface": "#2f3036",
+          "inverse-primary": "#bbc3ff",
+          "surface-bright": "#fbf8ff",
+          "surface-dim": "#d1d8ff",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f3f2ff",
+          "surface-container": "#eeedf4",
+          "surface-container-high": "#e8e7ee",
+          "surface-container-highest": "#e2e2e9"
+        },
+        "borderRadius": {"DEFAULT": "4px","lg": "4px","xl": "8px","full": "9999px"},
+        "spacing": {
+          "gutter": "24px","margin-desktop": "64px","md": "24px","sm": "12px",
+          "lg": "48px","base": "8px","xs": "4px","xl": "80px","margin-mobile": "16px"
+        },
+        "fontFamily": {
+          "serif": ["Playfair Display", "serif"],
+          "display-lg": ["Playfair Display", "serif"],
+          "body-md": ["Hanken Grotesk","sans-serif"],
+          "body-lg": ["Hanken Grotesk","sans-serif"],
+          "label-md": ["Hanken Grotesk","sans-serif"],
+          "headline-lg-mobile": ["Hanken Grotesk","sans-serif"],
+          "headline-lg": ["Hanken Grotesk","sans-serif"],
+          "headline-md": ["Hanken Grotesk","sans-serif"]
+        },
+        "fontSize": {
+          "display-lg": ["56px",{"lineHeight":"1.1","letterSpacing":"-0.01em","fontWeight":"700"}],
+          "body-md": ["16px",{"lineHeight":"1.6","fontWeight":"400"}],
+          "body-lg": ["18px",{"lineHeight":"1.6","fontWeight":"400"}],
+          "label-md": ["14px",{"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"600"}],
+          "headline-lg-mobile": ["32px",{"lineHeight":"1.2","fontWeight":"700"}],
+          "headline-lg": ["40px",{"lineHeight":"1.2","fontWeight":"700"}],
+          "headline-md": ["28px",{"lineHeight":"1.3","fontWeight":"600"}]
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+body { scroll-behavior: smooth; background: #fbf8ff; }
+
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 4px; width: 0%;
+  background: #2e3b80; z-index: 999;
+}
+
+.reveal-on-scroll {
+  opacity: 0; transform: translateY(40px);
+  transition: 1s ease;
+}
+.reveal-on-scroll.active {
+  opacity: 1; transform: translateY(0);
+}
+
+.nav-link { position: relative; padding-bottom: 2px; }
+.nav-link::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+  background-color: #2e3b80; transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+.nav-link.active-page::after { width: 100%; }
+
+.animated-heading .word {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.8s ease;
+}
+.animated-heading.active .word {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.marquee-container { display: flex; overflow: hidden; user-select: none; gap: 0; }
+.marquee-content {
+  flex-shrink: 0; display: flex; justify-content: space-around;
+  min-width: 90%; gap: 2rem; animation: marquee-scroll 40s linear infinite;
+}
+@keyframes marquee-scroll { from { transform: translateX(0) } to { transform: translateX(-100%) } }
+
+.mission-card {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  height: 100%;
+}
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -12px rgba(46, 59, 128, 0.15);
+}
+.btn-hover { transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; }
+.btn-hover:hover { opacity: 0.9; transform: translateY(-1px); }
+</style>
+
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+<div id="scroll-progress"></div>
+
+<!-- HEADER/NAV -->
+<nav class="w-full z-50 bg-surface/95 backdrop-blur-md border-b border-surface-container-high shadow-sm sticky top-0">
+  <div class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop">
+    
+    <!-- ================= MOBILE HEADER ================= -->
+    <div class="md:hidden flex flex-col w-full">
+      <div class="flex justify-between items-center py-3 w-full">
+        <div class="flex gap-2">
+          <a href="https://www.facebook.com/ReginaldoTrustGoa?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/reginaldotrust?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/919764917977" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-[#25D366] flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors" title="Chat on WhatsApp">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+          <button id="mobile-menu-btn" class="p-1 text-primary focus:outline-none" aria-label="Toggle menu">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+      </div>
+      <div class="flex justify-center pb-4 pt-1 w-full">
+        <a href="index.html">
+          <img alt="Reginaldo Trust Logo" class="h-[60px] w-auto object-contain" src="images/logo.webp"/>
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= DESKTOP HEADER ================= -->
+    <div class="hidden md:grid grid-cols-3 items-center py-4 relative w-full">
+      <!-- Social Icons (Left) -->
+      <div class="flex gap-3 justify-start">
+        <a href="https://www.facebook.com/ReginaldoTrustGoa?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/reginaldotrust?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <a href="index.html" class="flex items-center justify-center">
+          <img alt="Reginaldo Trust Logo" class="h-16 md:h-20 w-auto object-contain" src="images/logo.webp"/>
+        </a>
+      </div>
+
+      <div class="flex items-center justify-end gap-6">
+        <a href="https://wa.me/919764917977" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-[#25D366] flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors" title="Chat on WhatsApp">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+          </svg>
+        </a>
+        <a href="donate.html" class="bg-primary text-on-primary px-8 py-2.5 rounded font-label-md text-[15px] font-bold btn-hover shadow-sm">Donate</a>
+      </div>
+    </div>
+
+    <!-- Bottom Row: Desktop Links -->
+    <div class="hidden md:flex flex-wrap items-center justify-center gap-x-4 lg:gap-x-8 xl:gap-x-10 gap-y-2 w-full pt-2 pb-0">
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html">Home</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="about.html">About</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="ourwork.html">Services</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="agriculture.html">Agriculture</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="training.html">Training</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="initiatives.html">Initiatives</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold active-page text-primary pb-3" href="mission.html">Mission</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="gallery.html">Events</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="index.html#impact">Impacts</a>
+      <a class="nav-link font-headline-md text-[16px] font-bold text-surface-variant hover:text-primary transition-colors pb-3" href="contact.html">Connect</a>
+    </div>
+  </div>
+
+  <!-- ================= MOBILE MENU DRAWER ================= -->
+  <div id="mobile-menu" class="md:hidden group">
+    <div class="fixed inset-0 bg-black/60 z-[90] opacity-0 pointer-events-none transition-opacity duration-300 group-[.open]:opacity-100 group-[.open]:pointer-events-auto" onclick="document.getElementById('mobile-menu').classList.remove('open')"></div>
+    
+    <div class="fixed top-0 right-0 h-[100dvh] w-[85%] max-w-[360px] bg-white z-[100] transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col group-[.open]:translate-x-0 overflow-hidden">
+      
+      <div class="flex justify-end p-4">
+        <button onclick="document.getElementById('mobile-menu').classList.remove('open')" class="p-2 text-primary focus:outline-none" aria-label="Close menu">
+          <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+      </div>
+      
+      <div class="flex justify-center pb-6 border-b border-surface-container-high px-6">
+        <img src="images/logo.webp" alt="Reginaldo Trust Logo" class="h-14 w-auto object-contain" />
+      </div>
+
+      <div class="flex flex-col px-6 py-4 flex-1 overflow-y-auto">
+        <a href="index.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">home</span>
+          <span class="font-display-lg text-[16px] font-bold">Home</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">group</span>
+          <span class="font-display-lg text-[16px] font-bold">About</span>
+        </a>
+        <a href="ourwork.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">volunteer_activism</span>
+          <span class="font-display-lg text-[16px] font-bold">Services</span>
+        </a>
+        <a href="agriculture.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">agriculture</span>
+          <span class="font-display-lg text-[16px] font-bold">Agriculture</span>
+        </a>
+        <a href="training.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">school</span>
+          <span class="font-display-lg text-[16px] font-bold">Training</span>
+        </a>
+        <a href="initiatives.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">lightbulb</span>
+          <span class="font-display-lg text-[16px] font-bold">Initiatives</span>
+        </a>
+        <a href="mission.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-primary">
+          <span class="material-symbols-outlined text-2xl opacity-100">flag</span>
+          <span class="font-display-lg text-[16px] font-bold">Mission</span>
+        </a>
+        <a href="gallery.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">image</span>
+          <span class="font-display-lg text-[16px] font-bold">Events</span>
+        </a>
+        <a href="index.html#impact" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">bar_chart</span>
+          <span class="font-display-lg text-[16px] font-bold">Impacts</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-4 py-3 border-b border-surface-container-high text-on-surface/80 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl opacity-70">mail</span>
+          <span class="font-display-lg text-[16px] font-bold">Connect</span>
+        </a>
+        
+        <div class="mt-6 mb-4 flex flex-col gap-4">
+          <span class="text-xs font-bold text-on-surface/50 tracking-widest uppercase block mb-2">Follow Us</span>
+          <a href="https://www.facebook.com/ReginaldoTrustGoa?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-primary hover:opacity-80 transition-opacity">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span class="font-display-lg text-md font-bold">Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/reginaldotrust?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-primary hover:opacity-80 transition-opacity">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <span class="font-display-lg text-md font-bold">Instagram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative py-6 md:py-16 px-4 md:px-0 flex items-center justify-center text-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/about-bg.webp" alt="Mission Background" class="w-full h-full object-cover" onerror="this.style.display='none'">
+  </div>
+  <div class="absolute inset-0 bg-surface/80"></div>
+  <div class="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-6 md:px-0">
+    <h1 class="font-display-lg text-[28px] sm:text-4xl md:text-5xl font-bold text-primary animated-heading mt-2 md:mt-4 leading-tight">
+      Our Mission
+    </h1>
+    <p class="mt-2 md:mt-4 text-primary text-[15px] sm:text-xl md:text-2xl font-semibold reveal-on-scroll">
+      Serving Humanity with Compassion and Dignity
+    </p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="bg-primary py-3 md:py-6 overflow-hidden border-y border-primary/20 mb-4 md:mb-6">
+  <div class="marquee-container font-display-lg text-[16px] md:text-headline-md uppercase tracking-[0.2em]">
+    <div class="marquee-content text-on-primary/90">
+      <span>Uplift • Empower • Serve • Support • Protect • Inspire • Educate • Uplift • Empower • Serve • Support • Protect • Inspire • Educate</span>
+    </div>
+    <div aria-hidden="true" class="marquee-content text-on-primary/90">
+      <span>Uplift • Empower • Serve • Support • Protect • Inspire • Educate • Uplift • Empower • Serve • Support • Protect • Inspire • Educate</span>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION INTRO -->
+<section class="py-6 md:py-8 px-4 md:px-6 max-w-6xl mx-auto ">
+  <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+    <div class="h-full flex items-center">
+      <img src="images/about_main.webp" alt="Our Mission In Action" class="rounded-xl shadow-lg w-full max-h-[250px] md:max-h-[420px] object-cover reveal-on-scroll"/>
+    </div>
+    <div class="space-y-4 md:space-y-6 text-gray-700 text-base md:text-lg reveal-on-scroll">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary">A Commitment to Society</h2>
+      <p>
+        The core <strong class="text-primary">mission of Reginaldo Trust</strong> is to foster an inclusive and empowered society where every individual, regardless of their background, has the opportunity to thrive with dignity.
+      </p>
+      <p>
+        We operate on the fundamental belief that compassion in action can break the cycle of poverty. Through direct intervention in healthcare, education, agriculture, and skill development, we strive to be a catalyst for profound societal transformation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="py-6 md:py-12 bg-[#faf9f6] text-on-surface">
+  <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+    
+    <div class="mb-12 border-b border-gray-200 pb-6 reveal-on-scroll text-center">
+      <span class="text-primary font-bold tracking-widest text-xs uppercase block mb-1">Our Pillars</span>
+      <h2 class="text-3xl font-extrabold font-display-lg text-primary tracking-tight">Core Values</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div class="group relative p-4 md:p-8 bg-white/60 backdrop-blur-md border border-surface-container-high rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[160px] md:min-h-[260px] reveal-on-scroll" style="transition-delay:100ms;">
+        <!-- Accent Line Tint -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        
+        <div>
+          <!-- Icon Container -->
+          <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary-container/40 flex items-center justify-center transition-all duration-500 group-hover:bg-primary shadow-sm mb-3 md:mb-6 group-hover:rotate-3">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl transition-colors duration-500 group-hover:text-white">favorite</span>
+          </div>
+          <h4 class="font-display-lg text-[14px] md:text-xl font-bold text-primary tracking-tight transition-colors duration-300 group-hover:text-on-surface leading-tight">Compassion</h4>
+        </div>
+        
+        <!-- Description -->
+        <div class="border-t border-surface-container-high/60 pt-2 md:pt-4 mt-3 md:mt-4">
+          <p class="text-[12px] md:text-sm font-medium text-gray-600 leading-relaxed">Approaching every challenge with empathy, ensuring that care and understanding are at the heart of all our community initiatives.</p>
+        </div>
+      </div>
+
+      <div class="group relative p-4 md:p-8 bg-white/60 backdrop-blur-md border border-surface-container-high rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[160px] md:min-h-[260px] reveal-on-scroll" style="transition-delay:200ms;">
+        <!-- Accent Line Tint -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        
+        <div>
+          <!-- Icon Container -->
+          <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary-container/40 flex items-center justify-center transition-all duration-500 group-hover:bg-primary shadow-sm mb-3 md:mb-6 group-hover:rotate-3">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl transition-colors duration-500 group-hover:text-white">handshake</span>
+          </div>
+          <h4 class="font-display-lg text-[14px] md:text-xl font-bold text-primary tracking-tight transition-colors duration-300 group-hover:text-on-surface leading-tight">Equality</h4>
+        </div>
+        
+        <!-- Description -->
+        <div class="border-t border-surface-container-high/60 pt-2 md:pt-4 mt-3 md:mt-4">
+          <p class="text-[12px] md:text-sm font-medium text-gray-600 leading-relaxed">Providing free, unconditional support and services to the needy without any discrimination of caste, creed, or religion.</p>
+        </div>
+      </div>
+
+      <div class="group relative p-4 md:p-8 bg-white/60 backdrop-blur-md border border-surface-container-high rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[160px] md:min-h-[260px] reveal-on-scroll" style="transition-delay:300ms;">
+        <!-- Accent Line Tint -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        
+        <div>
+          <!-- Icon Container -->
+          <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary-container/40 flex items-center justify-center transition-all duration-500 group-hover:bg-primary shadow-sm mb-3 md:mb-6 group-hover:rotate-3">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl transition-colors duration-500 group-hover:text-white">trending_up</span>
+          </div>
+          <h4 class="font-display-lg text-[14px] md:text-xl font-bold text-primary tracking-tight transition-colors duration-300 group-hover:text-on-surface leading-tight">Empowerment</h4>
+        </div>
+        
+        <!-- Description -->
+        <div class="border-t border-surface-container-high/60 pt-2 md:pt-4 mt-3 md:mt-4">
+          <p class="text-[12px] md:text-sm font-medium text-gray-600 leading-relaxed">Not just giving aid, but equipping individuals with the education, skills, and resources needed to achieve long-term self-reliance.</p>
+        </div>
+      </div>
+
+      <div class="group relative p-4 md:p-8 bg-white/60 backdrop-blur-md border border-surface-container-high rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[160px] md:min-h-[260px] reveal-on-scroll" style="transition-delay:100ms;">
+        <!-- Accent Line Tint -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        
+        <div>
+          <!-- Icon Container -->
+          <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary-container/40 flex items-center justify-center transition-all duration-500 group-hover:bg-primary shadow-sm mb-3 md:mb-6 group-hover:rotate-3">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl transition-colors duration-500 group-hover:text-white">nature_people</span>
+          </div>
+          <h4 class="font-display-lg text-[14px] md:text-xl font-bold text-primary tracking-tight transition-colors duration-300 group-hover:text-on-surface leading-tight">Sustainability</h4>
+        </div>
+        
+        <!-- Description -->
+        <div class="border-t border-surface-container-high/60 pt-2 md:pt-4 mt-3 md:mt-4">
+          <p class="text-[12px] md:text-sm font-medium text-gray-600 leading-relaxed">Promoting practices that protect the environment and preserve our local heritage for future generations.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE SECTION -->
+<section class="py-16 md:py-24 relative overflow-hidden bg-surface-container-highest">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-primary blur-3xl"></div>
+  </div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal-on-scroll">
+    <span class="material-symbols-outlined text-primary text-6xl opacity-20 mb-6 block">format_quote</span>
+    <p class="font-display-lg text-2xl md:text-4xl leading-tight text-primary font-bold italic">
+      "Dedicated to the upliftment of the poor, deserving, and needy across every walk of life."
+    </p>
+    <div class="mt-8 pt-8 border-t border-primary/20 inline-block">
+      <p class="font-bold tracking-widest text-sm uppercase text-gray-600">The Reginaldo Trust Charter</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-6 md:py-16 px-margin-mobile md:px-margin-desktop bg-primary text-center">
+  <div class="max-w-3xl mx-auto reveal-on-scroll">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-display-lg">Be a Part of Our Mission</h2>
+    <p class="text-white/80 text-lg mb-8">Join hands with us to create a meaningful impact in the lives of those who need it most.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="donate.html" class="bg-white text-primary px-10 py-3 rounded font-bold text-lg btn-hover shadow-lg inline-block">Donate Now</a>
+      <a href="contact.html" class="border-2 border-white text-white px-10 py-3 rounded font-bold text-lg btn-hover inline-block hover:bg-white/10">Volunteer With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full bg-gray-200 px-margin-mobile md:px-margin-desktop py-6 text-on-surface">
+  <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-6">
+    <div class="flex flex-col items-center gap-2 max-w-lg">
+      <img src="images/logo.webp" alt="Reginaldo Trust Logo" class="h-14 w-auto object-contain">
+      <p class="text-sm opacity-80 leading-relaxed">
+        Dedicated to uplifting communities through education, health, and social service.
+      </p>
+    </div>
+    <div class="flex flex-col items-center gap-3">
+      <h4 class="font-bold text-primary uppercase tracking-widest text-xs mb-1">Connect</h4>
+      <div class="flex flex-col items-start gap-2 inline-flex">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+          <p class="text-sm opacity-80 text-left">H.No. 1088, St Xavier, Raia, Goa</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-xl">call</span>
+          <div class="text-sm opacity-80 text-left"><span>+91 98224 85327</span></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-xl">mail</span>
+          <p class="text-sm opacity-80 break-all text-left">reginaldotrust@gmail.com</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-xl">schedule</span>
+          <p class="text-sm opacity-80 text-left">Mon–Fri, 9:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center gap-4 pt-4 border-t border-gray-300 w-full">
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+        <a href="index.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Home</a>
+        <a href="about.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">About</a>
+        <a href="ourwork.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Services</a>
+        <a href="agriculture.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Agriculture</a>
+        <a href="training.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Training</a>
+        <a href="initiatives.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Initiatives</a>
+        <a href="mission.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Mission</a>
+        <a href="gallery.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Events</a>
+        <a href="contact.html" class="text-sm font-semibold opacity-80 hover:text-primary transition-colors">Connect</a>
+      </div>
+      <p class="text-xs opacity-50 uppercase tracking-widest text-center">
+        © 2026 Reginaldo Trust. Registered Public Trust.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll progress bar
+  window.addEventListener('scroll', () => {
+    const scroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    document.getElementById("scroll-progress").style.width = (scroll / height) * 100 + "%";
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("active"); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll(".reveal-on-scroll, .animated-heading").forEach(el => observer.observe(el));
+
+  // Animated headings
+  document.querySelectorAll(".animated-heading").forEach(el => {
+    const text = el.textContent.trim();
+    el.innerHTML = text.split(" ").map(w => `<span class="word">${w}&nbsp;</span>`).join("");
+  });
+  setTimeout(() => {
+    document.querySelectorAll(".animated-heading").forEach(el => el.classList.add("active"));
+  }, 200);
+
+  // Mobile menu toggle
+  document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.toggle("open");
+  });
+
+  // Active Page Highlight
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentPath = window.location.pathname.split('/').pop();
+    if (!currentPath || currentPath === '') currentPath = 'index.html';
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPath && !link.classList.contains('bg-primary')) {
+        link.classList.add('text-primary', 'after:scale-x-100');
+        link.classList.remove('opacity-80', 'opacity-60', 'text-on-surface');
+      }
+    });
+  });
+</script>
+</body>
+</html>
